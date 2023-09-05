@@ -1,15 +1,11 @@
-import sumar from "./sumador";
+import Ocurencias from "./ContadorOcurrencias";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const cadenaTexto = document.querySelector("#Texto");
+const form = document.querySelector("#Texto-form");
+const div = document.querySelector("#Ocurrencias-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + Ocurencias(cadenaTexto.value) + "</p>";
 });
